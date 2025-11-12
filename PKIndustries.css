@@ -69,13 +69,13 @@ ul li a:hover {
 .rectangle{ 
   background-color: var(--main-bg-color);
   height: 60px;
-  width: auto;
+  width: 100%;
+  position: relative;
 }
 
 h1{
-  -webkit-font-smoothing: antialiased; /* Chrome / Safari */
+  -webkit-font-smoothing: antialiased; /* Chrome + Safari */
   -moz-osx-font-smoothing: grayscale;  /* Firefox */
-  transform: translateZ(0);            /* triggers GPU rendering for cleaner edges */
 
   word-spacing: -20px;
 
