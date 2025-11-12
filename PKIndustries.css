@@ -16,7 +16,7 @@ html, body {
   background-color: var(--main-bg-color);
   color: var(--main-dark-text-color);
 
-  background: url('images/p6.webp') repeat 0 0;
+  /*background: url('images/p6.webp') repeat 0 0;*/
 }
 
 
@@ -66,11 +66,11 @@ ul li a:hover {
   color: var(--main-dark-text-color);
 }
 
-.rectangle{ 
-  background-color: var(--main-bg-color);
-  height: 60px;
+.rectangle{
+  position: relative; 
   width: 100%;
-  position: relative;
+  height: 60px;
+  background-color: var(--alt-green-color);
 }
 
 h1{
