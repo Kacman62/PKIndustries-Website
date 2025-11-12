@@ -100,6 +100,7 @@ h1 img {
   width: clamp(200px, 600px, 800px); 
   height: auto;
   vertical-align: middle; /* keeps it aligned with text */
+  border-radius: 4px;
 }
 
 .CEO {
@@ -242,9 +243,9 @@ button.toggle:active {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  max-width: 1200px;
-  padding: 50px;
-  margin-bottom: 100px;
+  max-width: 550px;
+  padding: 25px;
+  margin-bottom: 75px;
   border: 8px solid var(--alt-green-color);
   border-radius: 10px;
   text-decoration: none;
@@ -261,7 +262,7 @@ button.toggle:active {
 
 .projectBlock:hover{
   border: 8px solid var(--alt-blue-color);
-  transform: translateY(-2px); 
+  transform: translateY(-8px); 
   box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
 }
 
