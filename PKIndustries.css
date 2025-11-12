@@ -106,7 +106,8 @@ h1 img {
 
 .blogWords h2 {
   padding: 75px;
-  padding-bottom: 25px;
+  padding-bottom: 0px;
+  padding-top: 25px;
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -115,7 +116,8 @@ h1 img {
 
 .blogWords p {
   padding: 75px;
-  padding-top: 25px;
+  padding-top: 0px;
+  padding-bottom: 25px;
   display: flex;
   justify-content: space-between;
   font-size: 150%;
