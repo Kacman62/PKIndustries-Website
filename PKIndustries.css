@@ -68,9 +68,10 @@ ul li a:hover {
 
 .rectangle{
   position: relative; 
-  width: 100%;
+  width: 1.5vw;
   height: 60px;
   background-color: var(--alt-green-color);
+  overflow: auto;
 }
 
 h1{
@@ -101,6 +102,23 @@ h1 img {
   height: auto;
   vertical-align: middle; /* keeps it aligned with text */
   border-radius: 4px;
+}
+
+.blogWords h2 {
+  padding: 75px;
+  padding-bottom: 25px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  font-size: 200%;
+}
+
+.blogWords p {
+  padding: 75px;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 150%;
 }
 
 .CEO {
