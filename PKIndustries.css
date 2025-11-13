@@ -13,9 +13,8 @@ html, body {
   padding: 0;
 
   font-family: 'Azeret Mono', monospace;
-  background-color: var(--main-bg-color);
+  background: url('images/p6.webp') repeat 0 0;
   color: var(--main-dark-text-color);
-
   /*background: url('images/p6.webp') repeat 0 0;*/
 }
 
@@ -68,10 +67,9 @@ ul li a:hover {
 
 .rectangle{
   position: relative; 
-  width: 1.5vw;
-  height: 60px;
+  width: 100%;
+  height: auto;
   background-color: var(--alt-green-color);
-  overflow: auto;
 }
 
 h1{
@@ -98,19 +96,27 @@ h1 span{
 }
 
 h1 img {
+  padding-top: 50px;
   width: clamp(200px, 600px, 800px); 
   height: auto;
   vertical-align: middle; /* keeps it aligned with text */
   border-radius: 4px;
 }
 
-.blogWords h2 {
-  padding: 75px;
-  padding-bottom: 0px;
-  padding-top: 25px;
-  text-align: left;
+.blogWords {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 50px;
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+.blogWords h2 {
+  padding-left: 50px;
+  width: 1000px;
   font-size: 200%;
 }
 
@@ -118,8 +124,6 @@ h1 img {
   padding: 75px;
   padding-top: 0px;
   padding-bottom: 25px;
-  display: flex;
-  justify-content: space-between;
   font-size: 150%;
 }
 
@@ -247,20 +251,33 @@ button.toggle:active {
 }
 
 .projectHeader{
-  max-width: 1200px;
+  max-width: 1000px;
   padding: 25px;
   font-size: 150%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  margin: 0 auto;
+  width: 100%
 }
 
 .Projects {
   padding: 25px;
   font-size: 100%;
   text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projectBlock{
   font-size: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -282,6 +299,7 @@ button.toggle:active {
 
 
 .projectBlock:hover{
+  text-decoration: none;
   border: 2px solid var(--alt-blue-color);
   transform: translateY(-8px); 
   box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
@@ -318,13 +336,11 @@ button.toggle:active {
   grid-column: 1;
   justify-self: start;
   width: 200px;
-  background-color: var(--main-bg-color); 
   padding: 20px; 
 }
 
 /* Main column */
 .main {
-  background: url('images/p6.webp') repeat 0 0;
   grid-column: 2;
 
   max-width: 800px;
@@ -337,7 +353,6 @@ button.toggle:active {
   align-items: center;
 
   text-align: left;
-  background-color: var(--main-bg-color);
   padding: 20px;
 }
 
@@ -351,6 +366,8 @@ button.toggle:active {
   font-size: 300%;
   padding: 10px;
   margin: 50px;
+  margin-top: 0px;
+  padding-top: 10px;
   text-align: center;
 }
 
