@@ -14,6 +14,8 @@ html, body {
 
   font-family: 'Azeret Mono', monospace;
   font-kerning: normal;
+  text-indent: 2em;
+  letter-spacing: 2.5px;
   background: url('images/p6.webp') repeat 0 0;
   color: var(--main-dark-text-color);
 }
@@ -21,6 +23,7 @@ html, body {
 
 
 ul { 
+  text-indent: 0;
   position: fixed;
   left: 0;
   top: 0;
@@ -63,6 +66,7 @@ ul li a.active{
 ul li a:hover {
   background-color: var(--main-light-text-color);
   color: var(--main-dark-text-color);
+  text-decoration: none;
 }
 
 .rectangle{
@@ -362,7 +366,6 @@ button.toggle:active {
 .main p {
   width: 100%;       /* makes it shrink on smaller screens */
   font-size: 150%;
-  text-indent: 2em;
 }
 
 .main h2{
