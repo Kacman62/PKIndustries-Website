@@ -421,6 +421,5 @@ button.toggle:active {
 .footer {
   padding: 20px; /* Some padding */
   text-align: center; /* Center text*/
-  background: url('images/p6.webp') repeat 0 0;
   margin-bottom: 0px;
 }

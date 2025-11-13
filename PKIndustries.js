@@ -5,3 +5,4 @@ document.querySelectorAll('.toggle').forEach(btn => {
     btn.textContent = long.classList.contains('hidden') ? 'Read More' : 'Read Less';
   });
 });
+
