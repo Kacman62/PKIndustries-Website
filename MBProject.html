@@ -60,7 +60,9 @@
   out of an old DVD player and I had a pack of buttons to act as piano keys for now. As always, however, software became my weakness.
   There are a couple of ways to make sound, but the general idea is that you send analog data, either PWM or true analog, out of an IO 
   and conect it to a speaker or amplifier. The faster the oscillations of that wave, the higher the pitch. This is where "A = 440Hz" comes from, 
-  a wave going back and forth 440 times per second creates an "A" note. There are also a few audio libraries to abstract this away and make life a lot easier.
+  a wave going back and forth 440 times per second creates an "A" note. Sound is hard to get right, because having too slow of a loop causes pitches to shift
+  and loads of other problems, so I ended up choosing the Raspberry Pi Pico microcontroller which should be plenty fast for this project.
+  There are also a few audio libraries to abstract this away and make life a lot easier.
   I found a few online examples using the Mozzi audio library and even got sound to come through, albeit very faintly, but after hours of reasearch 
   I was unable to find a single project that made a standalone synthesizer using the Mozzi library. (Though there is a pretty good one using an Arduino and
   manually playing sin waves)
@@ -74,6 +76,23 @@
   Through a lot of sketchy arduino code I got different notes to play when one of 12 buttons were pressed. I then added 3 slide potentiometers, an 128px OLED 
   and rotary encoders and put all of it on a breadboard. One slider to control volume, one for pitch, and one for vibrator (the shake and color of a note) 
   There were a couple issues, mostly with playing notes at the same time, but it worked well enough to start designing a board and making this a full featured project. 
+</p>
+
+<h2>
+  Board design
+</h2>
+
+<p>
+  My favorite part of any project is designing a circuit board. I started with drawing out the schematic, which was pretty easy. This is where I normally 
+  put all the ideas I have down and refine it later. The 25 piano keys are multiplexed keyboard switches only taking up 10 GPIOs, with the caveat of needing diodes 
+  on every switch. To handle the audio side, 3 pins are connected to an I2S Digital to Analog Convertor. The PCM5100 chip is used to provide higher quality sound and hopefully 
+  fix a couple audio issues. The sliders are connected to the 3 analog inputs and the 2 rotary encoders take up another 6 pins. With the I2C oled, only two GPIOs are unused, 
+  with one connected to an LED and the other as a test pad for PWM audio if the I2S audio fails.  
+</p>
+
+<p>
+  Moving this all onto the board was a little challenging due to the sheer size of components. The final board ended up beign about 350mm x 90mm in order to fit all the switches.
+  The audio chips and passive components for those weren't too bad to route and I'm really happy with the final design.
 </p>
 
 </div>

@@ -15,12 +15,12 @@ html, body {
   font-family: 'Azeret Mono', monospace;
   font-kerning: normal;
   text-indent: 2em;
-  letter-spacing: 2.5px;
-  background: url('images/p6.webp') repeat 0 0;
+  letter-spacing: 2.25px;
+  background: linear-gradient(360deg, var(--alt-green-color), var(--alt-bright-green-color));
+  background-attachment: fixed;
   color: var(--main-dark-text-color);
+
 }
-
-
 
 ul { 
   text-indent: 0;
