@@ -12,6 +12,9 @@ html, body {
   margin: 0;
   padding: 0;
 
+  height: 100%;
+  width: 100%;
+
   font-family: 'Azeret Mono', monospace;
   font-kerning: normal;
   text-indent: 2em;
@@ -419,6 +422,5 @@ button.toggle:active {
   padding: 20px; /* Some padding */
   text-align: center; /* Center text*/
   background: url('images/p6.webp') repeat 0 0;
-  padding-bottom: 0px;
   margin-bottom: 0px;
 }
