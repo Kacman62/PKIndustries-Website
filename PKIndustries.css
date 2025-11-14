@@ -365,7 +365,6 @@ button.toggle:active {
   background-size: 512px 512px;
   image-rendering: pixelated;
   background-attachment: fixed;
-  
 
 }
 /* Create two unequal columns that sits next to each other */
@@ -379,6 +378,8 @@ button.toggle:active {
   
   background-color: var(--main-bg-color);
   border-radius: 12px;
+
+  border: 2px solid var(--main-bg-dark-color);
 }
 
 /* Main column */
@@ -387,6 +388,8 @@ button.toggle:active {
   
   background-color: var(--main-bg-color);
   border-radius: 12px;
+  border: 2px solid var(--main-bg-dark-color);
+  
 
   max-width: 800px;
   
@@ -414,6 +417,8 @@ button.toggle:active {
   margin-top: 0px;
   padding-top: 10px;
   text-align: center;
+
+  text-indent: 0px;
 }
 
 @keyframes fadeInUp {
