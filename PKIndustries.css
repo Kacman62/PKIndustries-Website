@@ -203,6 +203,7 @@ h1 img {
   justify-items: center;
   max-width: 1200px;   
   margin: 0 auto; 
+  padding: 75px;
 }
 
 .member {
