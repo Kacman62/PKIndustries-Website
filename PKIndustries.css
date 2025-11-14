@@ -19,7 +19,12 @@ html, body {
   font-kerning: normal;
   text-indent: 2em;
   letter-spacing: 2.25px;
-  background: linear-gradient(360deg, var(--alt-green-color), var(--alt-bright-green-color));
+
+  background-image: url('images/PKIExport.png');
+  background-repeat: repeat;
+  background-size: 512px 512px;
+  image-rendering: pixelated;
+
   background-attachment: fixed;
   color: var(--main-dark-text-color);
 
