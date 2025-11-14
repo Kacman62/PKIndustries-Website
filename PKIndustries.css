@@ -194,6 +194,8 @@ h1 img {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+
+  text-indent: 0px;
 }
 
 .team-grid {
