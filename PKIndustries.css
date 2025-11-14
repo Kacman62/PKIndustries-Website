@@ -20,10 +20,7 @@ html, body {
   text-indent: 2em;
   letter-spacing: 2.25px;
 
-  background-image: url('images/PKIExport.png');
-  background-repeat: repeat;
-  background-size: 512px 512px;
-  image-rendering: pixelated;
+  background-color: var(--main-bg-color);
 
   background-attachment: fixed;
   color: var(--main-dark-text-color);
@@ -113,6 +110,7 @@ h1 img {
   height: auto;
   vertical-align: middle; /* keeps it aligned with text */
   border-radius: 4px;
+  image-rendering: auto;
 }
 
 .blogWords {
@@ -226,9 +224,11 @@ h1 img {
 .member img {
   width: 235px; /*Images must be square!!!*/
   height: 235px;
-  height: auto;
   border-radius: 10px;
-  margin-bottom: 15px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px;
+
 }
 
 .member h3 {
@@ -343,6 +343,14 @@ button.toggle:active {
   gap: 40px;
   align-items: start;
   padding: 20px;
+
+  background-image: url('images/PKIExport.png');
+  background-repeat: repeat;
+  background-size: 512px 512px;
+  image-rendering: pixelated;
+  background-attachment: fixed;
+  
+
 }
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
@@ -351,12 +359,19 @@ button.toggle:active {
   justify-self: start;
   width: 200px;
   padding: 20px; 
+
+  
+  background-color: var(--main-bg-color);
+  border-radius: 12px;
 }
 
 /* Main column */
 .main {
   grid-column: 2;
-
+  
+  background-color: var(--main-bg-color);
+  border-radius: 12px;
+  
   max-width: 800px;
   
   flex: 1;
