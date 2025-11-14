@@ -95,6 +95,29 @@
   The audio chips and passive components for those weren't too bad to route and I'm really happy with the final design.
 </p>
 
+<h2>
+  The code
+</h2>
+
+<p>
+  The code my be favorite part of this entire project. The Raspberry Pi Pico is a joy to program in VS Code using the PlatformIO extension, which turns it into 
+  everything ArduinoIDE wishes it could be. The most challenging part was making use of both cores of the Pico. It's a very fast microcontroller, but with the speed that
+  Mozzi requires, it was the only option in order to make use of the OLED. The first core scans the keyboard matrix, analog sliders, and event flags from the user input on the 
+  second core. It uses this to mix sound, output it to the DAC, and record the last 128 samples for the second core to use. The other portion handles all the user input. 
+  It scans the rotary encoders, and handles the menu for the OLED. 
+
+  The OLED has 4 main tabs, with a couple more planned for the future. The main tab shows each of the 5 voices and what note they are playing. It also shows the states of the 
+  analog sliders and was very helpful for debugging. The waveform selector tab was really simple to implement, but due to both cores running at the same time, some care had to be taken 
+  with the variable changing. The waveform selector (and most other thigns that affect audio) set a shared atomic boolean flag, which the audio core than handles the switching of 
+  the waveform and effects. The ADSR selector was also really fun to implement. Using the rotary encoders you can set the times and levels of the Attack, Decay, Sustain, and Release 
+  of the note. The code then scales these values to fit the screen and draws lines to connect them showing an accurate graph. Finally the waveform viewer is the most complicated part of 
+  the entire codebase. Using the 128 samples received from the audio core, it draws lines connecting them and scales accordingly. It shows different patterns based on the selected 
+  waveform and number of notes playing, but because the buffer is circular (once it overflows it replaces the first item) the graph slides left and right and is hard to view. This is number 
+  one on the bug list and should be solved soon.
+</p>
+
+
+
 </div>
 
  <div class="footer">
