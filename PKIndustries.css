@@ -421,6 +421,15 @@ button.toggle:active {
   text-indent: 0px;
 }
 
+.Stats h2{
+  text-indent: 0px;
+  text-align: left;
+  font-size: 150%;
+  padding-left: 0px;
+  margin-left: 0px;
+
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
