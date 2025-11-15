@@ -360,7 +360,7 @@ button.toggle:active {
   margin: 0 auto;
   grid-template-columns: 1fr 4fr 1fr;
   gap: 40px;
-  align-items: flex-start;
+  align-items: start;
 
   padding: 40px;
 
@@ -374,6 +374,8 @@ button.toggle:active {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
+  grid-column: 1;
+  grid-row: 1;
   padding: 40px;
 
   background-color: var(--main-bg-color);
@@ -383,6 +385,8 @@ button.toggle:active {
 
 /* Main column */
 .main {
+  grid-column: 2;
+  grid-row: 1;
   max-width: 800px;
   width: 100%;
 
