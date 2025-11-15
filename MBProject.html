@@ -88,10 +88,13 @@
       For audio, 3 pins connect to an I2S Digital-to-Analog Converter (PCM5100 chip) for higher-quality sound. 
       The sliders connect to 3 analog inputs, and 2 rotary encoders take up 6 pins. The I2C OLED leaves two GPIOs unused—one for an LED and one as a test pad for PWM audio if needed.
     </p>
+
     <p>
       Moving everything onto the board was challenging due to component size. The final board measures about 350mm x 90mm to fit all switches. 
       Audio chips and passive components were easier to route, and I'm very happy with the final design.
     </p>
+
+    <img src="images\MBSynthImages\PCB.png">
 
     <h2>The Code</h2>
     <p>
@@ -102,6 +105,9 @@
       <strong>- Waveform selector:</strong> change wave type <br>
       <strong>- ADSR Changer:</strong> adjust Attack, Decay, Sustain, and Release of notes <br>
       <strong>- Waveform viewer:</strong> visualizes audio waveform from samples <br>
+
+      <img src="images\MBSynthImages\PixelArt.png">
+      <br>
 
       The waveform selector tab was simple to implement, but care had to be taken because both cores run simultaneously. 
       The waveform selector (and most other audio-affecting functions) sets a shared atomic boolean flag, which the audio core handles. 

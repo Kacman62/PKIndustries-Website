@@ -29,6 +29,7 @@ html, body {
 
 h1, h2{
   text-indent: 0px;
+  padding: 20px;
 }
 
 ul { 
@@ -142,6 +143,12 @@ h1 img {
   font-size: 150%;
   text-align: left;
   box-sizing: border-box;
+}
+
+.blogWords img {
+  max-width: 80%;
+  border-radius: 12px;
+
 }
 
 .CEO {
