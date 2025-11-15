@@ -302,6 +302,7 @@ button.toggle:active {
   text-indent: 0;
   border-radius: 10px;
   padding: 10px;
+  border: 2px solid var(--main-bg-dark-color);
 }
 
 .projectBlock{
@@ -355,10 +356,13 @@ button.toggle:active {
 /* Column container */
 .row {
   display: grid;
-  grid-template-columns: 1fr minmax(0, 800px) 1fr;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 4fr 1fr;
   gap: 40px;
-  align-items: start;
-  padding: 20px;
+  align-items: flex-start;
+
+  padding: 40px;
 
   background-image: url('images/PKIExport.png');
   background-repeat: repeat;
@@ -370,38 +374,28 @@ button.toggle:active {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  grid-column: 1;
-  justify-self: start;
-  width: 200px;
-  padding: 20px; 
+  padding: 40px;
 
-  
   background-color: var(--main-bg-color);
   border-radius: 12px;
-
   border: 2px solid var(--main-bg-dark-color);
 }
 
 /* Main column */
 .main {
-  grid-column: 2;
-  
+  max-width: 800px;
+  width: 100%;
+
+  padding: 40px;
+
   background-color: var(--main-bg-color);
   border-radius: 12px;
   border: 2px solid var(--main-bg-dark-color);
-  
-
-  max-width: 800px;
-  
-  flex: 1;
-  margin: 0;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  text-align: left;
   padding: 20px;
+  text-align: left;
 }
 
 .main p {
@@ -410,6 +404,7 @@ button.toggle:active {
 }
 
 .main h2{
+  text-indent: 0px;
   color: var(--alt-green-color);
   font-size: 300%;
   padding: 10px;
