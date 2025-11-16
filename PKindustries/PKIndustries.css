@@ -80,8 +80,8 @@ ol li a {
 }
 
 ol li a img {
-  margin-left: 1.5rem;
-  height: 6rem;
+  margin-left: .25rem;
+  height: 5.5rem;
   width: auto;
   object-fit: contain;
 }
