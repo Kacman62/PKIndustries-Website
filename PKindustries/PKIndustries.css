@@ -44,6 +44,8 @@ ul {
   background-color: var(--main-bg-dark-color);
   border-bottom: 4px solid var(--alt-bright-green-color);
 
+  
+
   display: flex;
   justify-content: flex-end;
   gap: 0;
@@ -554,22 +556,80 @@ button.toggle:active {
     padding-top: 0rem;
   }
 
-  h2, p {
-    font-size: 0.9rem;
-  }
-
   .team-grid {
     grid-template-columns: 1fr;
     padding: 0.5rem;
   }
 
-}
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
+  .blogWords {
+    padding: 1rem;       /* smaller padding */
+    max-width: 100%;     /* allow full width */
   }
+
+  .blogWords h2 {
+    padding: 0.5rem 0;   /* reduce padding */
+    font-size: 1.5rem;   /* shrink font */
+    max-width: 100%;
+  }
+
+  .blogWords p {
+    font-size: 1rem;     /* shrink font for text */
+    padding: 0.25rem 0;  /* reduce spacing */
+  }
+
+  .blogWords img {
+    max-width: 100%;      /* ensure image fits container */
+    height: auto;
+  }
+
+  h1 {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    padding: 2rem 1rem;
+  }
+
+  h2 {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  h3 {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+
+  /* Paragraphs */
+  p {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    padding: 0.25rem 0;
+  }
+
+  /* Navigation links */
+  ul li a {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  /* Blog section */
+  .blogWords {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .blogWords img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* CEO / Team sections */
+  .CEO, .ceo-content, .team, .team-grid {
+    padding: 1rem;
+  }
+
+  /* Projects and gallery */
+  .projectBlock, .artGallery img {
+    max-width: 100%;
+  }
+
 }
 
 .footer {
