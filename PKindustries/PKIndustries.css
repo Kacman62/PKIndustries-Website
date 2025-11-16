@@ -505,7 +505,7 @@ button.toggle:active {
     .row {
     display: block;
     padding: 1rem;
-    font-size: 1.25rem;
+
   }
 
   .side {
@@ -519,6 +519,14 @@ button.toggle:active {
     max-width: 100%;
     margin: 0;
     padding: 1rem;
+  }
+
+  .main p {
+    font-size: 1.25rem;
+  }
+
+  .main h2 { 
+    font-size: 1.75rem;
   }
 
   .CEO {
@@ -581,6 +589,17 @@ button.toggle:active {
   .blogWords img {
     max-width: 100%;      /* ensure image fits container */
     height: auto;
+  }
+
+  .BlogPromo img {
+    width: 90%;          /* fill the container width */
+    max-width: 90%;
+    height: auto;         /* maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--main-bg-dark-color);
+    display: block;
+    margin: 0 auto;       /* center image */
   }
 
   h1 {
@@ -646,6 +665,10 @@ button.toggle:active {
     border-radius: 12px;
     border: 2px solid var(--main-bg-dark-color);
   }
+
+  .artGallery img:hover {
+  transform: scale(1);
+}
 
 }
 
