@@ -555,7 +555,7 @@ button.toggle:active {
   }
 
   h2, p {
-    font-size: 80%;
+    font-size: 0.9rem;
   }
 
   .team-grid {
