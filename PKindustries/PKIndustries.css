@@ -111,7 +111,7 @@ h1 span{
 
 h1 img {
   padding-top: 3rem;
-  width: clamp(12rem, 36rem, 48rem); 
+  width: clamp(12rem, 40vw, 48rem);
   height: auto;
   vertical-align: middle;
   border-radius: 4px;
@@ -239,7 +239,7 @@ h1 img {
 .member img {
   width: 16rem; /*Images must be square!!!*/
   aspect-ratio: 1;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 10px;
   display: block;
   margin: 0 auto 15px;
@@ -392,7 +392,7 @@ button.toggle:active {
   display: grid;
   width: 100%;
   margin: 0 auto;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns:  1fr minmax(0, 50rem) 1fr;
   gap: 2.5rem;
   align-items: start;
 
