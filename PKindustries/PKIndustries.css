@@ -529,6 +529,15 @@ button.toggle:active {
   .ceo-content p {
     max-width: 100%;
   }
+
+  ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  ul li a {
+    text-align: center;
+    padding: 1rem;
+  }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
