@@ -11,6 +11,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  padding-top: 3rem;
 
   height: 100%;
   width: 100%;
@@ -31,8 +32,7 @@ h1, h2{
   padding: 1.25rem;
 }
 
-ul { 
-  text-indent: 0;
+ol { 
   position: fixed;
   left: 0;
   top: 0;
@@ -40,47 +40,60 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: var(--main-bg-dark-color);
   border-bottom: 4px solid var(--alt-bright-green-color);
 
-  
-
   display: flex;
+
   justify-content: flex-end;
+  align-items: center;
+  height: 6rem;
   gap: 0;
 
   z-index: 1000;
+
 }
 
-ul li{
+ol li{
   border-left: 2px solid var(--main-bg-color);
+  height: 100%;
 }
 
-ul li:last-child {
-  border-left: none;
-}
-
-ul li:first-child {
-  border-right: none;
+ol li:first-child {
+  width: 13rem;
   margin-right: auto;
+  border: none;
 }
 
-ul li a {
-  display: block;
+ol li:nth-child(2) {
+  border: none;
+}
+
+ol li a {
+  display: flex;
+  align-items: center;
   color: var(--main-light-text-color);
   padding: 1.25rem 1rem;
   text-decoration: none;
+  height: 100%;
+
 }
 
-ul li a.active{
-  background-color: var(--alt-blue-color);
+ol li a img {
+  margin-left: 1.5rem;
+  height: 6rem;
+  width: auto;
+  transform: scale(1.5);
+  object-fit: contain;
+}
+
+ol li a.active{
+  background-color: var(--alt-green-color);
   color: var(--main-light-text-color);
 }
 
-ul li a:hover {
-  background-color: var(--main-light-text-color);
-  color: var(--main-dark-text-color);
+ol li a:hover {
+  background-color: var(--alt-blue-color);
   text-decoration: none;
 }
 
