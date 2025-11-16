@@ -83,7 +83,6 @@ ol li a img {
   margin-left: 1.5rem;
   height: 6rem;
   width: auto;
-  transform: scale(1.5);
   object-fit: contain;
 }
 
