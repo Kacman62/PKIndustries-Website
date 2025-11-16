@@ -548,7 +548,12 @@ button.toggle:active {
   }
 
  body {
-    padding-top: 3rem; /* match the new mobile navbar height */
+    padding-top: 6rem; /* match the new mobile navbar height */
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr; /* single column */
+    padding: 0.5rem;
   }
 
 }
