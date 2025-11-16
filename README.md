@@ -7,3 +7,5 @@ PK Industries is a fake company I use to brand all my projects. This website is 
 # Check it out at [pkindustry.vercel.app](https://pkindustry.vercel.app/)
 Version 1 of this site is now deployed. I probably wont add more content, but instead focus on making it feel better, and optimize for mobile screens
 
+This was my first time ever using html, css, and second time using JS. I tried to create a good site, and im looking for feedback.
+All art and derivations of the PK Industries logo were created by me, the PK Industries logo was created with Logo.com and edited by me.
