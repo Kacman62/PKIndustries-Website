@@ -534,12 +534,24 @@ button.toggle:active {
     flex-direction: column;
     align-items: stretch;
   }
+
   ul li a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
     text-align: center;
     padding: 1rem;
   }
-}
 
+  ul li:first-child {
+    text-align: center;
+    margin-right: 0px;
+  }
+
+ body {
+    padding-top: 3rem; /* match the new mobile navbar height */
+  }
+
+}
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
