@@ -237,7 +237,7 @@ h1 img {
 }
 
 .member img {
-  width: 16rem; /*Images must be square!!!*/
+  width: 12rem; /*Images must be square!!!*/
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 10px;
