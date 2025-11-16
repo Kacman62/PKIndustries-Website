@@ -63,7 +63,7 @@
       The flaw from earlier comes from how to deal with charging a battery over USB. When running off battery power, the system needs to turn anywhere from 4.2-3.0V into a stable 3.3V. 
       This requires a buck-boost convertor and a load of filtering. The biggest problem comes when plugging in the 5V USB. It not only needs to charge the battery, but also power it when plugged in, because batteries don't like being charged and discharged at the same time. 
       The old design didn’t account for either of those issues and I hoped that I had fixed those in this version (more on that later)
-
+    </p>
     <h2>The Logic</h2>
     <p>
      In addition to the STM32L010K8 main processor there are three sensors, a 128px OLED and a side mounted rotary encoder. The RV3032 C7 is both “the most accurate real time clock” and has a temperature sensor, working over I2C. 
