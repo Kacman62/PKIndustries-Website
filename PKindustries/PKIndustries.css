@@ -533,6 +533,9 @@ button.toggle:active {
   ul {
     flex-direction: column;
     align-items: stretch;
+
+    position: relative;
+    z-index: auto;
   }
 
   ul li a {
@@ -548,7 +551,7 @@ button.toggle:active {
   }
 
  body {
-    padding-top: 6rem; /* match the new mobile navbar height */
+    padding-top: 10rem; /* match the new mobile navbar height */
   }
 
   .team-grid {
