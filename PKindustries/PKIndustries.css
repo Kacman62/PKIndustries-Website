@@ -8,6 +8,8 @@
   --alt-bright-green-color: #01FF70;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -60,7 +62,7 @@ ol li{
 }
 
 ol li:first-child {
-  width: 13rem;
+  width: 16rem;
   margin-right: auto;
   border: none;
 }
