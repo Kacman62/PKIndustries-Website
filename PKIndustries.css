@@ -464,12 +464,34 @@ button.toggle:active {
 
 }
 
+.artGallery {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artGallery img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 2px solid var(--main-bg-dark-color);
+  break-inside: avoid;
+  display: block;
+  transition: transform .2s ease;
+}
+
+.artGallery img:hover {
+  transform: scale(1.075);
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
- h2, p, img {
+ h2, p {
   animation: fadeInUp 0.5s ease forwards;
   opacity: 0; /* start hidden */
 }
