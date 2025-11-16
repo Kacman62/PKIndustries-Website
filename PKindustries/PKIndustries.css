@@ -551,11 +551,11 @@ button.toggle:active {
   }
 
  body {
-    padding-top: 10rem; /* match the new mobile navbar height */
+    padding-top: 0rem;
   }
 
   .team-grid {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
     padding: 0.5rem;
   }
 
