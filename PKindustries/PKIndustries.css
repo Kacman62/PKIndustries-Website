@@ -554,6 +554,10 @@ button.toggle:active {
     padding-top: 0rem;
   }
 
+  h2, p {
+    font-size: 80%;
+  }
+
   .team-grid {
     grid-template-columns: 1fr;
     padding: 0.5rem;
