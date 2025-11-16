@@ -505,6 +505,7 @@ button.toggle:active {
     .row {
     display: block;
     padding: 1rem;
+    font-size: 1.25rem;
   }
 
   .side {
@@ -628,6 +629,22 @@ button.toggle:active {
   /* Projects and gallery */
   .projectBlock, .artGallery img {
     max-width: 100%;
+  }
+
+  .artGallery {
+    column-count: 1;        /* Only 1 image per row */
+    column-gap: 0;          /* Remove gaps for full width */
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .artGallery img {
+    width: 100%;            /* Make images fill the container */
+    max-width: 100%;
+    height: auto;           /* Keep aspect ratio */
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    border: 2px solid var(--main-bg-dark-color);
   }
 
 }
