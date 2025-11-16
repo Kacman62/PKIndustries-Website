@@ -17,7 +17,6 @@ html, body {
 
   font-family: 'Azeret Mono', monospace;
   font-kerning: normal;
-  text-indent: 2em;
   letter-spacing: 2.1px;
 
   background-color: var(--main-bg-color);
@@ -45,12 +44,15 @@ ul {
   background-color: var(--main-bg-dark-color);
   border-bottom: 4px solid var(--alt-bright-green-color);
 
+  display: flex;
+  justify-content: flex-end;
+  gap: 0;
+
   z-index: 1000;
 }
 
 ul li{
-  float: right;
-  border-right: 2px solid var(--main-bg-color);
+  border-left: 2px solid var(--main-bg-color);
 }
 
 ul li:last-child {
@@ -59,6 +61,7 @@ ul li:last-child {
 
 ul li:first-child {
   border-right: none;
+  margin-right: auto;
 }
 
 ul li a {
@@ -131,7 +134,8 @@ h1 img {
 
 .blogWords h2 {
   padding-left: 3rem;
-  width: 60rem;
+  max-width: 60rem;
+  width: 100%;
   font-size: 200%;
 }
 
@@ -159,7 +163,6 @@ h1 img {
   gap: 1.25rem;       
   flex-wrap: wrap; 
   padding: 4.5rem; 
-  margin-left: 6rem;
 }
 
 .CEO h2{
@@ -506,11 +509,25 @@ button.toggle:active {
     width: 100%;
     margin-bottom: 1rem;
     justify-self: stretch;
+    padding: 1rem;
   }
 
   .main {
     max-width: 100%;
     margin: 0;
+    padding: 1rem;
+  }
+
+  .CEO {
+    padding: 1rem;
+  }
+
+  .ceo-content {
+    flex-direction: column;
+  }
+
+  .ceo-content p {
+    max-width: 100%;
   }
 }
 
