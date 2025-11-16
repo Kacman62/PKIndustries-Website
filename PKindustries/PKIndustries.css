@@ -13,6 +13,7 @@
 html, body {
   margin: 0;
   padding: 0;
+
   padding-top: 3rem;
 
   height: 100%;
@@ -57,14 +58,18 @@ ol {
 }
 
 ol li{
+
   border-left: 2px solid var(--main-bg-color);
   height: 100%;
 }
 
 ol li:first-child {
-  width: 16rem;
+  width: 12rem;
+  height: 100%;
   margin-right: auto;
   border: none;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 ol li:nth-child(2) {
@@ -575,6 +580,10 @@ button.toggle:active {
     justify-content: center;
   }
 
+  ol li:first-child{
+    width: 100%;
+  }
+
   ol li a {
     padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
@@ -591,7 +600,7 @@ button.toggle:active {
     margin-bottom: 0.5rem;
   }
 
- body {
+ html, body {
     padding-top: 0px;
   }
 
