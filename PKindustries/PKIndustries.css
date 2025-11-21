@@ -106,7 +106,7 @@ ol li a:hover {
 .rectangle{
   position: relative; 
   width: 100%;
-  height: auto;
+  height: 12rem;
   background-color: var(--alt-green-color);
 }
 
@@ -670,6 +670,10 @@ button.toggle:active {
   p {
     font-size: clamp(0.8rem, 3.5vw, 1rem);
     padding: 0.25rem 0;
+  }
+
+  .rectangle {
+    max-width: 100%;
   }
 
   /* Navigation links */
