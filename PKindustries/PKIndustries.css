@@ -8,16 +8,19 @@
   --alt-bright-green-color: #01FF70;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
+
+  padding-top: 3rem;
 
   height: 100%;
   width: 100%;
 
   font-family: 'Azeret Mono', monospace;
   font-kerning: normal;
-  text-indent: 2em;
   letter-spacing: 2.1px;
 
   background-color: var(--main-bg-color);
@@ -27,8 +30,12 @@ html, body {
 
 }
 
-ul { 
-  text-indent: 0;
+h1, h2{
+  text-indent: 0px;
+  padding: 1.25rem;
+}
+
+ol { 
   position: fixed;
   left: 0;
   top: 0;
@@ -36,48 +43,70 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: var(--main-bg-dark-color);
   border-bottom: 4px solid var(--alt-bright-green-color);
 
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+  height: 6rem;
+  gap: 0;
+
   z-index: 1000;
+
 }
 
-ul li{
-  float: right;
-  border-right: 2px solid var(--main-bg-color);
+ol li{
+
+  border-left: 2px solid var(--main-bg-color);
+  height: 100%;
 }
 
-ul li:last-child {
-  border-left: none;
+ol li:first-child {
+  width: 16rem;
+  height: 100%;
+  margin-right: auto;
+  border: none;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
-ul li:first-child {
-  border-right: none;
+ol li:nth-child(2) {
+  border: none;
 }
 
-ul li a {
-  display: block;
+ol li a {
+  display: flex;
+  align-items: center;
   color: var(--main-light-text-color);
-  padding: 20px 16px;
+  padding: 1.25rem 1rem;
   text-decoration: none;
+  height: 100%;
+
 }
 
-ul li a.active{
-  background-color: var(--alt-blue-color);
+ol li a img {
+  margin-left: .25rem;
+  height: 5.5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+ol li a.active{
+  background-color: var(--alt-green-color);
   color: var(--main-light-text-color);
 }
 
-ul li a:hover {
-  background-color: var(--main-light-text-color);
-  color: var(--main-dark-text-color);
+ol li a:hover {
+  background-color: var(--alt-blue-color);
   text-decoration: none;
 }
 
 .rectangle{
   position: relative; 
   width: 100%;
-  height: auto;
+  height: 12rem;
   background-color: var(--alt-green-color);
 }
 
@@ -85,28 +114,28 @@ h1{
   -webkit-font-smoothing: antialiased; /* Chrome + Safari */
   -moz-osx-font-smoothing: grayscale;  /* Firefox */
 
-  word-spacing: -20px;
+  word-spacing: -1.25rem;
 
   background-color: var(--alt-green-color);
   color: var(--main-light-text-color);
-  font-size: clamp(1.5rem, 5vw, 4rem);
-  padding:75px;
+  font-size: clamp(1rem, 5vw, 4rem);
+  padding: 4.5rem;
   margin: 0px 0px;
   display: flex;
   text-align: left;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 h1 span{
   position: relative;
-  top: 110px;
+  top: 7rem;
   
 }
 
 h1 img {
-  padding-top: 50px;
-  width: clamp(200px, 600px, 800px); 
+  padding-top: 3rem;
+  width: clamp(12rem, 40vw, 48rem);
   height: auto;
   vertical-align: middle;
   border-radius: 4px;
@@ -118,81 +147,88 @@ h1 img {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  padding: 50px;
-  max-width: 1000px;
+  padding: 3rem;
+  max-width: 60rem;
 
   margin: 0 auto;
 }
 
 .blogWords h2 {
-  padding-left: 50px;
-  width: 1000px;
+  padding-left: 3rem;
+  max-width: 60rem;
+  width: 100%;
   font-size: 200%;
 }
 
 .blogWords h2,
 .blogWords p {
-  padding: 75px;
+  padding: 4.5rem;
   padding-top: 0px;
-  padding-bottom: 25px;
+  padding-bottom: 1.5rem;
   font-size: 150%;
   text-align: left;
   box-sizing: border-box;
 }
 
+.blogWords img {
+  max-width: 80%;
+  border-radius: 12px;
+
+  border: 2px solid var(--main-bg-dark-color);
+}
+
 .CEO {
-  max-width: 1400px;
+  max-width: 84rem;
   display: flex;
   align-items: center;
-  gap: 20px;       
+  gap: 1.25rem;       
   flex-wrap: wrap; 
-  padding: 75px; 
-  margin-left: 100px;
+  padding: 4.5rem; 
 }
 
 .CEO h2{
   font-size: 2.8rem;
   color: var(--main-dark-text-color);
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   text-align: center; 
 }
 
 
 .ceo-content {
-  max-width: 1600px;
+
   display: flex; 
   align-items: center; 
-  gap: 25px;                
+  gap: 1.5rem;                
   flex-wrap: wrap;  
   justify-content: center; 
 }
 
 .ceo-content img {
-  width: clamp(200px, 300px, 400px);
+  width: clamp(12rem, 20rem, 24rem);
   height: auto;
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 .ceo-content p {
   font-size: 150%;
-  max-width: 800px;
+  max-width: 48rem;
   line-height: 1.5;
 }
 
 .team h2 {
-  padding: 75px;
+  padding: 4.5rem;
   font-size: 2.8rem;
   color: var(--alt-green-color);
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
 }
 
 .team {
-  padding: 60px 40px;
+  padding: 4rem 2.5rem;
   flex-direction: column; 
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.25rem;
   justify-content: center;
 
   text-indent: 0px;
@@ -200,22 +236,22 @@ h1 img {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
   justify-items: center;
-  max-width: 1200px;   
+  max-width: 75rem;   
   margin: 0 auto; 
-  padding: 75px;
+  padding: 4.5rem;
 }
 
 .member {
-  max-width: 340px;
-  width: 280px;
+  max-width: 20rem;
+  width: 16rem;
   text-align: left;
   background: var(--main-bg-color);
   border: 4px solid var(--alt-green-color);
   border-radius: 12px;
-  padding: 20px;
+  padding: 1.25rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -225,13 +261,12 @@ h1 img {
 }
 
 .member img {
-  width: 235px; /*Images must be square!!!*/
-  height: 235px;
-  border-radius: 10px;
+  width: 12rem; /*Images must be square!!!*/
+  aspect-ratio: 1;
   object-fit: cover;
+  border-radius: 10px;
   display: block;
   margin: 0 auto 15px;
-
 }
 
 .member h3 {
@@ -261,7 +296,7 @@ button.toggle {
   border: 2px solid var(--main-bg-dark-color);
   background-color: var(--alt-green-color);
   color: white;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -279,8 +314,8 @@ button.toggle:active {
 }
 
 .projectHeader{
-  max-width: 1000px;
-  padding: 25px;
+  max-width: 75rem;
+  padding: 1.5rem;
   font-size: 150%;
   display: flex;
   justify-content: center;
@@ -292,7 +327,7 @@ button.toggle:active {
 }
 
 .Projects {
-  padding: 25px;
+  padding: 1.5rem;
   font-size: 100%;
   text-decoration: none;
 
@@ -302,7 +337,7 @@ button.toggle:active {
 
   background-image: url('images/PKIExport.png');
   background-repeat: repeat;
-  background-size: 512px 512px;
+  background-size: 32rem 32rem;
   image-rendering: pixelated;
   background-attachment: fixed;
 }
@@ -311,7 +346,7 @@ button.toggle:active {
   background: var(--main-bg-color);
   text-indent: 0;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0.75rem;
   border: 2px solid var(--main-bg-dark-color);
 }
 
@@ -323,9 +358,9 @@ button.toggle:active {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  max-width: 550px;
-  padding: 15px;
-  margin-bottom: 25px;
+  max-width: 35rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
   border: 2px solid var(--alt-green-color);
   border-radius: 10px;
   text-decoration: none;
@@ -351,12 +386,25 @@ button.toggle:active {
   padding-left: 0px;
   padding-right: 0px;
   width: 100%;
-  height: 175px;
+  max-height: 11rem;
   object-position: 50% 25%;
   object-fit: cover;
   border-radius: 12px;
 }
 
+.BlogPromo img {
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+
+  border-radius: 12px;
+  border: 2px solid var(--main-bg-dark-color);
+  object-position: 50% 0%;
+
+  padding: 0;
+
+  display: block;
+}
 
 /* Ensure proper sizing */
 * {
@@ -368,15 +416,15 @@ button.toggle:active {
   display: grid;
   width: 100%;
   margin: 0 auto;
-  grid-template-columns: 1fr 4fr 1fr;
-  gap: 40px;
+  grid-template-columns:  1fr minmax(0, 50rem) 1fr;
+  gap: 2.5rem;
   align-items: start;
 
-  padding: 40px;
+  padding: 2.5rem;
 
   background-image: url('images/PKIExport.png');
   background-repeat: repeat;
-  background-size: 512px 512px;
+  background-size: 32rem 32rem;
   image-rendering: pixelated;
   background-attachment: fixed;
 
@@ -386,7 +434,7 @@ button.toggle:active {
 .side {
   grid-column: 1;
   grid-row: 1;
-  padding: 40px;
+  padding: 2.5rem;
 
   background-color: var(--main-bg-color);
   border-radius: 12px;
@@ -397,10 +445,10 @@ button.toggle:active {
 .main {
   grid-column: 2;
   grid-row: 1;
-  max-width: 800px;
+  max-width: 50rem;
   width: 100%;
 
-  padding: 40px;
+  padding: 2.5rem;
 
   background-color: var(--main-bg-color);
   border-radius: 12px;
@@ -408,7 +456,7 @@ button.toggle:active {
 
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 1.25rem;
   text-align: left;
 }
 
@@ -421,10 +469,10 @@ button.toggle:active {
   text-indent: 0px;
   color: var(--alt-green-color);
   font-size: 300%;
-  padding: 10px;
-  margin: 50px;
+  padding: 0.75rem;
+  margin: 3rem;
   margin-top: 0px;
-  padding-top: 10px;
+  padding-top: 0.75rem;
   text-align: center;
 
   text-indent: 0px;
@@ -439,12 +487,34 @@ button.toggle:active {
 
 }
 
+.artGallery {
+  column-count: 3;
+  column-gap: 1.25rem;
+  padding: 2.5rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.artGallery img {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  border-radius: 12px;
+  border: 2px solid var(--main-bg-dark-color);
+  break-inside: avoid;
+  display: block;
+  transition: transform .2s ease;
+}
+
+.artGallery img:hover {
+  transform: scale(1.075);
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
- h2, p, img {
+ h2, p {
   animation: fadeInUp 0.5s ease forwards;
   opacity: 0; /* start hidden */
 }
@@ -453,31 +523,207 @@ button.toggle:active {
 @media screen and (max-width: 700px) {
     .row {
     display: block;
-    padding: 16px;
+    padding: 1rem;
+
   }
 
   .side {
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     justify-self: stretch;
+    padding: 1rem;
   }
 
   .main {
     max-width: 100%;
     margin: 0;
+    padding: 1rem;
   }
-}
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
+  .main p {
+    font-size: 1.25rem;
+  }
+
+  .main h2 { 
+    font-size: 1.75rem;
+  }
+
+  .CEO {
+    padding: 1rem;
+  }
+
+  .ceo-content {
+    flex-direction: column;
+  }
+
+  .ceo-content p {
+    max-width: 100%;
+  }
+
+  ol {
+    flex-direction: column;
+    align-items: stretch;
+
+    justify-content: center;
+    height: auto;
+    position: relative;
+    z-index: 1000;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  ol li {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+  }
+
+  ol li:first-child{
     width: 100%;
   }
+
+  ol li a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  ol li a img {
+    height: 4rem;
+    width: auto;
+    margin-bottom: 0.5rem;
+  }
+
+ html, body {
+    padding-top: 0px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  .blogWords {
+    padding: 1rem;       /* smaller padding */
+    max-width: 100%;     /* allow full width */
+  }
+
+  .blogWords h2 {
+    padding: 0.5rem 0;   /* reduce padding */
+    font-size: 1.5rem;   /* shrink font */
+    max-width: 100%;
+  }
+
+  .blogWords p {
+    font-size: 1rem;     /* shrink font for text */
+    padding: 0.25rem 0;  /* reduce spacing */
+  }
+
+  .blogWords img {
+    max-width: 100%;      /* ensure image fits container */
+    height: auto;
+  }
+
+  .BlogPromo {
+    display: block;        /* make sure it's a block element */
+    width: 100%;           /* full width of container */
+    height: auto;          /* scale proportionally */
+    margin-top: 1rem;      /* space between header and image */
+    order: 2;              /* push it below header text if in flex container */
+  }
+
+  /* If the promo image is inside a flex header container */
+  h1 + .BlogPromo {
+    order: 2;              /* force it below h1 */
+  }
+
+  .BlogPromo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--main-bg-dark-color);
+  }
+
+  h1 {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    padding: 2rem 1rem;
+  }
+
+  h2 {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  h3 {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+
+  /* Paragraphs */
+  p {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    padding: 0.25rem 0;
+  }
+
+  .rectangle {
+    max-width: 100%;
+  }
+
+  /* Navigation links */
+
+  /* Blog section */
+  .blogWords {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .blogWords img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* CEO / Team sections */
+  .CEO, .ceo-content, .team, .team-grid {
+    padding: 1rem;
+  }
+
+  /* Projects and gallery */
+  .projectBlock, .artGallery img {
+    max-width: 100%;
+  }
+
+  .artGallery {
+    column-count: 1;        /* Only 1 image per row */
+    column-gap: 0;          /* Remove gaps for full width */
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .artGallery img {
+    width: 100%;            /* Make images fill the container */
+    max-width: 100%;
+    height: auto;           /* Keep aspect ratio */
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    border: 2px solid var(--main-bg-dark-color);
+  }
+
+  .artGallery img:hover {
+  transform: scale(1);
+}
+
 }
 
 .footer {
-  padding: 20px; /* Some padding */
+  padding: 1.25rem; /* Some padding */
   text-align: center; /* Center text*/
   margin-bottom: 0px;
+  text-indent: 0px;
 }

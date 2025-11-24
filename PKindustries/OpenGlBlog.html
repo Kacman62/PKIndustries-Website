@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PKIndustries</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="PKIndustries.css"/>
+
+</head>
+
+<body>
+  
+<ol>
+  <li style="float:left"><a href="index.html"><img src="images\PKIWhite.png"></a></li>
+  <li style="border-right:none"><a href="aboutUs.html" >About Us</a></li>
+  <li><a href="Projects.html">Projects</a></li>
+  <li><a href="Blogs.html"   class="active">Blog</a></li>
+  <li><a href="MySpace.html">My Space</a></li>
+</ol>
+
+<div class="rectangle"></div>
+
+<div class="BlogPromo">
+<h1>
+  <span>Open GL</span>
+  <img src="images\OpenGLImages\OpenGLFire.png" style="object-position: 50% 25%;">
+</h1>
+</div>
+
+<div class="blogWords">
+
+<h2>OpenGL: Somehow its not the Worst</h2>
+    <h2><em>By: P. Kac | 11/20/25</em></h2>
+
+    <p>
+        I like to think I enjoy coding. I’m mainly a hardware guy, but I still enjoy coding microcontrollers, and I really enjoyed AP Computer Science, despite it being in Java (still my favorite, but C++ is great too). A couple days ago I decided to change that though, I decided to open Pandora’s Box, I decided to learn OpenGL.
+    </p>
+
+    <h2>What is OpenGL?</h2>
+    <p>
+        OpenGL is a way to open up control of a graphics card to a programmer, and use it to render graphics. (Important to note this is different, but similar to CUDA which allows mass computation on a graphics card, OpenGL is specifically for rendering graphics and shaders). OpenGL defines a set of graphics functions that should exist somewhere, and lets GPU manufacturers write drivers to implement these functions. OpenGL, and its derivatives WebGL, and Vulkan (we’ll get back to that one later) as well as competitors like DirectX and Metal make up nearly every rendering pipeline, and are used in almost every game, game engine, and operating system.
+    </p>
+
+    <p>
+        This is usually preferable to what my hardware code usually looks like, which is a mix of exported bitmaps directly into plain bytes, either the AdafruitGFX or U8G2 graphics libraries, and a mix of other random primitive draws to create graphics on small screens and 1 off projects.
+
+    </p>
+
+    <h2>What About the Other Ones?</h2>
+    <p>
+        There's a lot of competition in how to render graphics, and they all basically do the same thing, just in different ways. The main difference is that DirectX and Metal are Microsoft and Apple exclusive, respectively. OpenGL is cross platform and generally considered to be easy. Vulkan is made by the same team and gives better results, with a few trade offs, we'll get back again.
+    </p>
+
+    <h2>Where to Start?</h2>
+    <p>  
+        Despite my ingenious rendering solutions for embedded device programs, I’m not that good with code, or computers (I’ve made computers make sounds my CS friends have never heard before, multiple times). Currently I am 8 hours, and 7 videos into a great OpenGL tutorial by Victor Gorden, and all my current knowledge comes from this tutorial. Despite my lack of experience, I still feel the need to talk about this.
+    </p>
+
+    <h2>It all Goes Wrong</h2>
+    <p>
+        I’m tempted to say that installing OpenGL was the hardest part, but that would be a gross understatement. The tutorial even has a whole 10 minute video on just installing everything, which did help a lot. Even still, I faced nearly every computer fear I had doing this. I first needed to download the OpenGL binary, then compile it with CMake and import that into a Visual Studio Code project. Then I needed to download GLFW window manager. Then I needed to set up my project and create a separate library and include folders in the correct root structure, and then point my Integrated Development Environment to the correct direction. 
+    </p>
+
+    <p>
+        The keen among you, may have already spotted the first problem I faced though. Visual Studio Code is not an IDE. Technically speaking, Visual Studio Code is a code editor. I use it like an IDE with the PlatformIO extension which allows me to write code and create projects specifically for microcontrollers and allows for easy uploading. I don’t usually write pure code projects and I see most people using VSCode so I thought that's what OpenGL would want. The problem is that I needed Visual Studio, not Visual Studio Code. Both made by microsoft, both do codey things, but Visual Studio Code has a more cohesive project handling, and more importantly allows for building and code execution natively (I think VSCode can also do that in a different way, but the tutorial used VS and that's what I needed to do).
+    </p>
+
+    <p>
+        After redoing the entire installation process, and then doing it a third time because I pointed the file structure to some random documents folder buried beneath System32 files and not my desktop I was finally ready to get coding.
+    </p>
+
+    <h2>Hello World</h2>
+
+    <p>
+        In most programming languages, the first program a developer writes is a simple print statement to say Hello World into the terminal. It’s a little cliche, but printing debug statements is a great habit and helps for debugging. OpenGL being graphics focus has a similar idea of a Hello Triangle, where a simple triangle is rendered into a window (Triangles are also the easiest shape for GPUs to render and all objects are eventually broken into triangles for rendering) This sounds like it would be a simple, but requires no less than 200 lines of code across 4 different files just to make things work. This is no fault of the tutorial, and just how it works. 
+    </p>
+
+    <p>
+        First we define a bunch of startup scripts and confirm everything works. Then we use GLFW to open a window of defined size. Then we copy color data to the back buffer through the GPU. Then we send the GPU hardcoded triangle vertices and indices and it connects these together and renders to the screen. Finally we delete all the used and unused data at the end of the program because this is C++ of course. 
+    </p>
+
+    <image src="images\OpenGLImages\Pyramind.png">
+
+    <h2>Back to Vulkan</h2>
+
+    <p>
+        And this is the EASY version of this. OpenGL is considered best for beginners (in this field, do not make graphics programming your first coding project please), and is slowly being phased out for Vulkan. Which requires 1300 lines of code to do the exact same thing. I'm not even going to pretend to understand all of this. I don’t even want to think about DirectX and having to rewrite proprietary shader code twice. OpenGL is the good guy in all of this somehow.
+    </p>
+
+    <image src="images\OpenGLImages\Vulklan.png">
+
+    <p>
+        I'm still going to keep using it, and learn more, but I just needed to get this out and share, because there needs to be a better way to do all of this. (Yes I’m aware game engines exist for this reason, but I’m stubborn) 
+    </p>
+
+    <p>
+        It's still better than compiling Aseprite from source.  
+    </p>
+
+</div>
+
+ <div class="footer">
+  <h2>Thanks for reading</h2>
+  <p>Even though this is more casual, I hope to still provide useful information</p>
+  <script src="PKIndustries.js"></script>
+</body>
+</html>
