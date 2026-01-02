@@ -135,7 +135,7 @@ h1 span{
 
 h1 img {
   padding-top: 3rem;
-  width: clamp(12rem, 40vw, 48rem);
+  max-width: 1200px;
   height: auto;
   vertical-align: middle;
   border-radius: 4px;
